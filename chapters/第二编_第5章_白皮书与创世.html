@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>第二编 · 第5章 · 白皮书与创世</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{
+  --ink:#202124;--muted:#5f6368;--accent:#0b6efd;--accent-2:#8b5cf6;--bg:#ffffff;--card:#f6f8fa;--warn:#b42318;
+  --shadow:0 1px 2px rgba(16,24,40,.06),0 1px 3px rgba(16,24,40,.1);
+}
+html,body{background:var(--bg);color:var(--ink);margin:0;padding:0;
+  font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","PingFang SC","Noto Sans CJK SC","Source Han Sans SC","Microsoft Yahei",Arial,Helvetica,sans-serif;
+  line-height:1.78;}
+.container{max-width:860px;margin:48px auto 120px;padding:0 20px;}
+h1,h2,h3{line-height:1.28;margin:1.2em 0 .6em;}
+h1{font-size:2rem;letter-spacing:.01em;}
+h2{font-size:1.5rem;border-bottom:2px solid #eee;padding-bottom:.25rem;}
+h3{font-size:1.12rem;color:var(--muted);}
+.subtitle{color:var(--muted);}
+.small{font-size:.95rem;color:var(--muted);}
+ul,ol{padding-left:1.2rem;}
+.sidebar{background:#fbfbff;border:1px solid #e6e8ff;border-left:5px solid var(--accent-2);
+  border-radius:10px;padding:10px 12px 10px 14px;box-shadow:var(--shadow);margin:12px 0;}
+.sidebar .sb-title{font-weight:700;color:#4f46e5;margin-bottom:.2rem;font-size:1.02rem;}
+.sidebar .sb-list,.sidebar .sb-metrics{padding-left:1.0rem;margin:.1rem 0;}
+.data-card{border-left-color:#0ea5e9;}
+.timeline-card{border-left-color:#8b5cf6;}
+.compare-card{border-left-color:#0ea5e9;}
+.controversy{border:1px solid #fde2e1;background:#fff5f5;border-left:5px solid var(--warn);
+  border-radius:10px;padding:10px 12px 10px 14px;box-shadow:var(--shadow);margin:12px 0;}
+.controversy .ct-title{font-weight:800;color:var(--warn);margin-bottom:.2rem;font-size:1.02rem;}
+.recap{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-top:10px;}
+.card{background:#ffffff;border:1px solid #e5e7eb;border-radius:10px;padding:10px 12px;box-shadow:var(--shadow);}
+.inline-card{border:1px solid #e5e7eb;border-left:4px solid #6366f1;background:#ffffff;border-radius:10px;
+  padding:8px 10px;margin:8px 0 12px 0;box-shadow:var(--shadow);}
+.inline-card .ic-title{font-weight:700;margin-bottom:.2rem;font-size:1.0rem;}
+.inline-card.person{border-left-color:#6366f1;}
+.concept{border:1px dashed #c7d2fe;background:#f8fafc;border-radius:10px;padding:10px 12px;margin:10px 0 14px 0;}
+.concept .cp-title{font-weight:700;color:#4f46e5;margin-bottom:.2rem;}
+.concept .cp-analogy{margin-top:.2rem;color:#5f6368;font-style:italic;}
+table{border-collapse:collapse;width:100%;font-size:.96rem;}
+th,td{border:1px solid #e5e7eb;padding:6px 8px;vertical-align:top;}
+th{background:#f8fafc;text-align:left;}
+footer{margin-top:36px;color:var(--muted);font-size:.9rem;}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+  <h1>第5章 白皮书与创世 <span class="subtitle">（第二编（2008–2014）比特币的发明与早期扩散）</span></h1>
+  <p class="small">作者：Zino ｜ 2025年著</p>
+</header>
+
+<h2>2008·白皮书：一种大于过去一切信用形式的电子现金</h2>
+<p>2008 年 10 月 31 日，<strong>中本聪（Satoshi Nakamoto）</strong>以化名在密码学邮件列表发布了白皮书<strong>《Bitcoin: A Peer-to-Peer Electronic Cash System》</strong>，宣告一种无需银行或清算机构参与、可在开放网络中直接点对点转账的电子现金方案；同帖附上论文链接，后来成为比特币的出发点。白皮书的要义，是<strong>把“谁来背书”的问题改写为“如何被所有人独立验证”的问题</strong>：网络中的节点把交易打包进区块，通过工作量证明让每个区块都带有可核验的算力成本，并在偶发分叉时遵循“最长链”（更准确地说是累计工作量最大）的规则来收敛到同一条账本历史，从而在缺乏中心裁判的环境里形成一致记录。为了让出块节奏保持稳定，系统大约每 2,016 个区块依据时间戳回顾实际出块速度，自动调整难度，使全网平均出块接近 10 分钟，这既抚平了算力波动，也为交易确认提供了可预期的节拍。整条由区块首尾相接构成的“时间戳链”，让任何人都能下载数据、核对签名与哈希、重放历史，独立验证自己收到的币是否来自一条被全网承认的最长链，验证就此代替了信任，这也是比特币设计的精神所在。换句话说，核心不在<strong>“相信谁”</strong>，而在<strong>“如何验证”</strong>——<em>“相信谁取决于谁的可验证性更高。”</em></p>
+<div class="inline-card person">
+  <div class="ic-title">人物贴士 · 中本聪（Satoshi Nakamoto）</div>
+  <div class="ic-body">比特币的白皮书作者与早期实现者；以匿名/化名的方式推动了去中心化电子现金的落地。</div>
+</div>
+
+<div class="concept">
+  <div class="cp-title">概念快译 · 点对点电子现金</div>
+  <div class="cp-body">不依赖银行或支付公司，用户直接在开放网络里转移所有权，每笔变更都进公共账本。</div>
+  <div class="cp-analogy">像“全城共享的账簿”：任何人都可记一笔，但大家只承认那条“投入最多工作量”的版本。</div>
+</div>
+
+<h2>2009·创世：从一条消息开始的链</h2>
+<p>2009年1月3日，比特币历史上的第一个区块诞生，人们称之为“创世区块”。这一刻标志着比特币的正式诞生，一位化名为中本聪（Satoshi Nakamoto）的神秘人物在自己的电脑上完成了首次“挖矿”。有趣的是，中本聪在这个创世区块中写入了一段特殊的信息：<em>The Times 03/Jan/2009 Chancellor on brink of second bailout for banks</em>。这是英国《泰晤士报》2009年1月3日当天头版的新闻标题。翻译过来，这句话的大意是：“2009年1月3日，英国财政大臣正处于实施第二轮银行紧急援助（银行纾困）的边缘。”换句话说，当天英国的报纸正在报道政府准备再次出手拯救银行的消息。</p><figure class="newspaper-figure"><img src="../images/a0a022ca-ec48-486d-ba20-2e7b86c67a71.png" alt="The Times front page, 2009-01-03: Chancellor on brink of second bailout for banks" loading="lazy" referrerpolicy="no-referrer" style="max-width:100%;height:auto;display:block;margin:0 auto;" /><figcaption style="text-align:center;font-size:0.9em;opacity:.8;">2009年1月3日《泰晤士报》头版</figcaption></figure>
+<p>图为2009年1月3日的英国《泰晤士报》头版，标题即为“Chancellor on brink of second bailout for banks”（财政大臣正处于第二次救助银行的边缘）。这一头条新闻被中本聪作为信息嵌入到了比特币的第一个区块中。</p><p>中本聪为何要把这样一条报纸标题嵌入比特币的第一个区块里？其中包含了两层用意。首先，这段文字充当了一个明确且可验证的时间印记。由于该新闻标题只会出现在2009年1月3日的报纸上，将它写入区块意味着创世区块不可能早于这个日期生成。这等于为比特币的诞生盖上了时间戳印章，向任何人证明比特币确实是在2009年初问世的。在去中心化的网络中，没有权威机构来记录时间，但通过引用现实中的报纸日期，中本聪巧妙地确保了区块链起点的时间有据可查，不容篡改。</p><p>更重要的是，这条消息点明了中本聪创建比特币的初衷和背景动机。2008年前后，全球正经历一场严重的金融危机。许多西方大型银行因为过度冒险的投资和金融操作而陷入困境，濒临倒闭。为了防止金融体系崩溃，各国政府被迫动用巨额资金救助银行，这就是所谓的“纾困”或“救助”。在英国，政府早在2008年就出资挽救了部分银行，而到了2009年初，根据《泰晤士报》的报道，财政大臣正准备对银行实施第二轮紧急援助。这种情况突显出传统金融体系的一个弊病：当我们把信用建立在中心化的银行和机构上时，一旦它们出了问题，往往需要更高级的权力机构来担保兜底，最后甚至要由政府动用全民资金来反复救助。银行在顺境中享受利润，但在逆境中由公众买单，这样的循环引发了人们对现行金融体系的质疑。</p><p>中本聪正是希望通过比特币来打破这种“中心信用—再担保—再救助”的恶性循环。他在2008年发表的比特币白皮书中提出了一种全新的电子现金系统——点对点的、去中心化的货币网络。比特币网络没有中央银行或政府作为中介，交易由参与网络的所有节点共同验证。货币的发行是按照预定算法逐步“挖矿”产生，总量恒定，不会因为某个机构的决策而无限超发。这意味着，在比特币的世界里，不存在传统意义上“银行倒闭政府来救”的情形：没有哪一家机构能够滥用权力导致系统性风险，也没有谁需要对他人的失职买单。每个人可以掌控自己的数字货币，无需信任银行，也无需担心某天银行挤兑或金融危机时自己的存款化为乌有。中本聪在创世区块留下的这句报纸标题，正是对当时金融乱象的注脚和回应。它既是对时代背景的记录，也是宣告比特币使命的暗示：比特币诞生的目的之一，就是要为人们提供一种不依赖传统银行体系的选择，避免再度陷入由中心化金融机构失控而引发、最后只能靠全民救助来收场的循环。通过这一巧妙的细节，中本聪向世界传达了他的立场和愿景——希望人们能够跳出对中心权威反复托底救市的依赖，迈向一个由个人掌控、自我赋权的金融新纪元。</p>
+
+<div class="concept">
+  <div class="cp-title">概念快译 · 区块、链与难度</div>
+  <div class="cp-body">若干笔交易打包成区块；区块需解出符合目标的哈希（PoW）；把新区块接在前一区块之后，形成“最长（工作量最大）”的一条链。难度会周期性调整，以维持约 10 分钟的区块时间。</div>
+  <div class="cp-analogy">像在木板上钉钉子：每钉一次都要花气力（算力），最坚固的那条钉子最多、最费力的板子，被默认当作“主板”。</div>
+</div>
+
+<h2>生生不息的运转机制</h2>
+<p>在这套设计里，比特币靠几处真正决定秩序的“关键齿轮”彼此咬合：首先把发行与激励直接写进协议，记账者（矿工）产出首个有效区块即可领取区块补贴并获得所含交易的手续费，补贴自 50 BTC 起，每挖出 210,000 个区块自动减半，使新增供给按既定节奏递减并最终把总量收敛到约 2100 万枚，从源头建立可预期的稀缺曲线与长期激励。<em>“任何愿景若没有稳定激励闭环，只能算作运动而非机制。”</em></p>
+<p>其次，当网络短暂分叉时，节点默认承认“累计工作量最大”的那条历史，即人们常说的“最长链规则”，用可验证的算力成本而非人为仲裁来统一账本，从机制层面把“信谁”改成“怎么验证”。配合这一裁决原则的是“难度目标”，协议每 2,016 个区块回顾一次实际出块速度，自动调节挖矿难度，把平均区块时间稳定在约 10 分钟，使攻击者的重组成本随全网算力水位同步抬升、系统节拍保持可预期。在记账模型上，采用 UTXO（未花费交易输出）作为最小单位，交易通过“花费旧 UTXO、生成新 UTXO”来转移所有权，单个 UTXO 只能被花一次，天然避免账户共享状态下的竞态，提高并行处理与校验效率。这些部件形成合力：区块补贴与手续费提供持续动力，最长链与难度调整把作弊与重写历史的代价提高到现实难以承受的水平，保障系统在开放环境中也能维持可持续的秩序——因为<em>“只要能免费作假、作恶，就一定会”。</em></p>
+<h2>客户端与首批见证者</h2>
+<p>2009 年 1 月 9 日，比特币 v0.1 发布到密码学邮件列表，区块链网络第一次对外开放，让愿意尝试的人都能下载客户端、生成密钥并接入点对点网络；两天后，哈尔·芬尼在推特写下“Running bitcoin”，那不是一句口号，而是他真正在自家电脑上跑起了节点、参与了出块与转账的现场记录；再过一天，1 月 12 日，他收到了中本聪转来的 10 BTC，这笔交易被写进了区块 170，成为链上可考的第一笔点对点转账，宣告“这套东西真的能跑起来”。从来不是偶然：芬尼早在 2004 年就做过“可复用工作量证明”（RPOW）这个原型，尝试用可验证的计算成本来支撑数字现金的稀缺；更早些，他在 PGP 团队做过核心开发，长期活跃于密码学与隐私工具的实践圈层，因此当白皮书引发讨论时，他不仅第一时间下载并参与测试，还在邮件列表里和中本聪就传播与确认的细节展开过推演。命运层面，这位长期的长跑爱好者在 2009 年被确诊为渐冻症，身躯逐渐被禁锢，但他仍坚持写代码、在 2013 年回顾自己与比特币的四年缘起，直至 2014 年去世后按照早年的预嘱进行低温保存；这一连串细节，让“第一笔 10 BTC”不再只是历史 trivia，而是密码朋克理想、计算机科学与人类文明的新起点——它把“人人可验证”的愿景从论文和邮件里搬到了现实世界。<figure class="newspaper-figure"><img src="../images/595240F6-3E1A-41BD-9E23-3A3B0C8552F3.JPEG" loading="lazy" referrerpolicy="no-referrer" style="max-width:100%;height:auto;display:block;margin:0 auto;" /></figure></p>
+<div class="inline-card person">
+  <div class="ic-title">人物贴士 · 哈尔·芬尼（Hal Finney）</div>
+  <div class="ic-body">密码学与 PGP 贡献者；最早运行比特币软件并参与讨论、测试与改进。</div>
+</div>
+
+<h2>对照表 · 账户制 vs UTXO</h2>
+<div class="sidebar compare-card compact">
+  <div class="sb-title">对照卡 · 账户制 / UTXO</div>
+  <table>
+    <thead>
+      <tr><th>维度</th><th>账户制</th><th>UTXO</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>并行性</td><td>较低：共享余额，易冲突</td><td>较高：独立输出并行验证</td></tr>
+      <tr><td>隐私</td><td>地址复用易画像</td><td>天然拆分、可降低关联</td></tr>
+      <tr><td>脚本表达</td><td>以账户权限为主</td><td>以“花费条件”编程</td></tr>
+      <tr><td>轻节点</td><td>较重</td><td>Merkle 证明友好</td></tr>
+    </tbody>
+  </table>
+</div>
+
+
+<h2>关键时间线（2008–2010）</h2>
+<div class="sidebar timeline-card compact">
+  <div class="sb-title">时间线</div>
+  <ul class="sb-list">
+    <li>2008-10-31：白皮书发布（邮件列表）</li>
+    <li>2009-01-03：创世区块</li>
+    <li>2009-01-09：早期客户端发布</li>
+    <li>2009-01-12：首笔链上转账（10 BTC）</li>
+    <li>2010-05-22：比特币披萨日（10,000 BTC 购买两份披萨）</li>
+  </ul>
+</div>
+
+<div class="controversy compact">
+  <div class="ct-title">辩论</div>
+  <ul>
+    <li><b>辩题</b>：比特币匿名作者与“无预挖”机制，是增强了体系的信任，还是带来了新的不确定性？</li>
+    <li><b>正方</b>：匿名与无预挖提升了公正性。中本聪不依赖个人权威，而是把信任转移到可验证的代码与链上历史；创世区块奖励不可花费，早期发行完全公开透明，避免了“开发者先占便宜”的嫌疑，增强了规则的可信度。</li>
+    <li><b>反方</b>：匿名与无预挖也带来风险。匿名作者意味着责任主体缺席，若出现漏洞或争议，难以追责；无预挖使系统启动阶段缺乏缓冲基金和开发资源，生态建设完全依赖自发参与，可能削弱早期抗风险能力。</li>
+    <li><b>结论</b>：匿名与无预挖既是理念选择，也是制度设计的取舍。它们突出了“信任外化到规则”的价值观，但也暴露了治理与资源配置上的空白。比特币由此形成的特征是：规则不可质疑、开发者退居幕后，系统长远依赖社区自发力量去维护和演化。</li>
+  </ul>
+</div>
+
+<h2>章末复盘</h2>
+<div class="recap compact">
+  <div class="card">
+    <strong>要点</strong>
+    <ul class="small">
+      <li>白皮书把“反女巫的成本”与“时间顺序”合为一体：PoW + 最长链 + 难度调整。</li>
+      <li>激励与共识闭环：出块奖励驱动记账，最长链解决分歧。</li>
+      <li>UTXO 为扩展与隐私留出空间；“电子现金”的最小颗粒是“输出”。</li>
+    </ul>
+  </div>
+  <div class="card">
+    <strong>下一章预告</strong>
+    <ul class="small">
+      <li>难度与挖矿：算力竞赛如何改变网络结构与地理分布？</li>
+      <li>客户端与生态：从邮件列表到论坛，谁在维护秩序？</li>
+    </ul>
+  </div>
+</div>
+
+<footer>
+  <p>本作品采用知识共享署名-非商业性使用-禁止演绎 4.0 国际许可协议（CC BY-NC-ND 4.0）授权。</p>
+</footer>
+
+</div>
+</body>
+</html>
